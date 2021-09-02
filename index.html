@@ -3,6 +3,23 @@ layout:
 search_exclude: true
 image: 
 ---
+
 Biostat 823 
 
-<a href="/Biostat_823/jupyter/2020/02/20/Math_is_fun.html">Visit my first blog</a>
+<a href="/Biostat_823/jupyter/2020/02/20/Math_is_fun.html">Visit my first blog page</a>
+
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content | markdownify }}
+
+
+  {% if site.paginate %}
+    {% assign rawposts = paginator.posts %}
+  {% else %}
+    {% assign rawposts = site.posts %}
+  {% endif %}
+
