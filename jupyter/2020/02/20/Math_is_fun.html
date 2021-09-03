@@ -126,7 +126,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this assignment, 3 questions were answered from project euler: <a href="https://projecteuler.net/about">https://projecteuler.net/about</a></p>
+<p>In this assignment, 3 questions were answered from project euler: <a href="https://projecteuler.net/about">https://projecteuler.net/about</a>. I chose all problems solved by fewer than 25,000 people to challenge myself.</p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ Colin has six six-sided (cubic) dice, each with faces numbered 1, 2, 3, 4, 5, 6.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Solution-Explanation">Solution Explanation<a class="anchor-link" href="#Solution-Explanation"> </a></h3><p>First, the possible outcomes for die rolls for Peter and Colin were calculated with intertools combinations_with_replacement since each integer has an equal probability of occuring with each roll. Once the outcomes were produced, the sum of each outcome was calculated using a for loop. Then, all of the different combinations of sums were produced using the product function. This function created a list of tuples, so this was changed to a list of lists to make manipulation easier. A list comprehension was used to filter the list of lists to those where peter had a higher sum. The count of the outcomes where peter won was divided by the total number of outcomes. This gave us a probability of 0.5504525.</p>
+<h3 id="Solution-Explanation">Solution Explanation<a class="anchor-link" href="#Solution-Explanation"> </a></h3><p>First, the possible outcomes for die rolls for Peter and Colin were calculated with intertools combinations_with_replacement since each integer has an equal probability of occuring with each roll. Once the outcomes were produced, the sum of each outcome was calculated using a for loop. Then, all of the different combinations of sums were produced using the product function. This function created a list of tuples, so this was changed to a list of lists to make manipulation easier. A list comprehension was used to filter the list of lists to those where peter had a higher sum. The count of the outcomes where peter won was divided by the total number of outcomes. This gave a probability of 0.5504525, after rounding to 7 decimal places.</p>
 
 </div>
 </div>
@@ -212,7 +212,7 @@ Colin has six six-sided (cubic) dice, each with faces numbered 1, 2, 3, 4, 5, 6.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Project-Euler-problem-501">Project Euler problem 501<a class="anchor-link" href="#Project-Euler-problem-501"> </a></h2><p>The eight divisors of 24 are 1, 2, 3, 4, 6, 8, 12 and 24. The ten numbers not exceeding 100 having exactly eight divisors are 24, 30, 40, 42, 54, 56, 66, 70, 78 and 88. 
 Let f(n) be the count of numbers not exceeding n with exactly eight divisors.
-You are given f(100) = 10, f(1000) = 180 and f(10^6) = 224427.
+You are given f(100) = 10, f(1000) = 180 and f(10^6) = 224427).
 Find f(10^12).</p>
 
 </div>
@@ -243,40 +243,10 @@ Find f(10^12).</p>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span> <span class="mi">12</span><span class="p">):</span>
     <span class="n">list_num</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_divisors</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">list_num</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="c1">#print(list_num.count(8))</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-8-0b5e24ccb9ca&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> list_num <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">**</span> <span class="ansi-cyan-fg">12</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg">     </span>list_num<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>get_divisors<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> 
-<span class="ansi-green-intense-fg ansi-bold">     12</span> print<span class="ansi-blue-fg">(</span>list_num<span class="ansi-blue-fg">.</span>count<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-8-0b5e24ccb9ca&gt;</span> in <span class="ansi-cyan-fg">get_divisors</span><span class="ansi-blue-fg">(n)</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">def</span> get_divisors<span class="ansi-blue-fg">(</span>n<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     list <span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span>n<span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> int<span class="ansi-blue-fg">(</span>n <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span class="ansi-green-fg">if</span> n <span class="ansi-blue-fg">%</span> i <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>             list<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>int<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -285,7 +255,7 @@ Find f(10^12).</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This solution worked perfectly fine for the smaller provided solutions (e.g. f(100) and f(1000). I discovered, however how inefficient this solution was when attempting to run 10^6. After waiting an ungodly amount of time I realized I needed to find a better solution. I then attempted the following solution:</p>
+<p>This solution worked perfectly fine for the smaller provided solutions (e.g. f(100) and f(1000)). I discovered, however how inefficient this solution was when attempting to run 10^6. After waiting an ungodly amount of time I realized I needed to find a better solution. I then attempted the following solution:</p>
 
 </div>
 </div>
@@ -322,7 +292,7 @@ Find f(10^12).</p>
 <p>Sources used: 
 <a href="https://math.stackexchange.com/questions/2800632/why-is-finding-factors-until-half-of-the-number-enough">https://math.stackexchange.com/questions/2800632/why-is-finding-factors-until-half-of-the-number-enough</a>
 <a href="https://www.geeksforgeeks.org/python-which-is-faster-to-initialize-lists/">https://www.geeksforgeeks.org/python-which-is-faster-to-initialize-lists/</a></p>
-<h3 id="Soultion:">Soultion:<a class="anchor-link" href="#Soultion:"> </a></h3>
+<h3 id="Solution:">Solution:<a class="anchor-link" href="#Solution:"> </a></h3>
 </div>
 </div>
 </div>
@@ -342,27 +312,40 @@ Find f(10^12).</p>
     <span class="sd">&quot;&quot;&quot; This function finds the count of numbers with exactly 8 divisors&quot;&quot;&quot;</span>
     <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_string</span><span class="p">)</span>
     <span class="n">numbers_with_eight_dividers</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">divisor_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">number_to_divide</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
-        <span class="n">divisor_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-        <span class="n">factor_dict</span> <span class="o">=</span> <span class="n">factors</span><span class="p">(</span><span class="n">number_to_divide</span><span class="p">)</span>
-        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">factor_dict</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="n">factor_set</span> <span class="o">=</span> <span class="n">factors</span><span class="p">(</span><span class="n">number_to_divide</span><span class="p">)</span> <span class="c1">#use factor function to find factors</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">factor_set</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">):</span>
             <span class="n">numbers_with_eight_dividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number_to_divide</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers_with_eight_dividers</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">factors</span><span class="p">(</span><span class="n">num_string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function finds all of the factors for a number&quot;&quot;&quot;</span>
     <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_string</span><span class="p">)</span>
-    <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">else</span> <span class="mi">1</span> <span class="c1">#chose step size based on even or odd input </span>
     <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span>
-                      <span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="o">//</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span><span class="p">)))</span>
+                      <span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="o">//</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span><span class="p">)))</span> <span class="c1"># create list of factors </span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">divisor_count</span> <span class="o">=</span> <span class="n">find_divisor</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">divisor_count</span> <span class="o">=</span> <span class="n">find_divisor</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">divisor_count</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -371,7 +354,8 @@ Find f(10^12).</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Solution-Explanation">Solution Explanation<a class="anchor-link" href="#Solution-Explanation"> </a></h3><p>This solution uses 2 functions, the first function creates a dictionary for numbers with eight divisors. The second function is used in the first function to find the factors of a number. the upper limit of the range of the list comprehension is the sqrt(num) because the second factor in a pair of factors is always less than the square root of the num. reduce along with <strong>add</strong> is used to add the factors to a set.</p>
+<h3 id="Solution-Explanation">Solution Explanation<a class="anchor-link" href="#Solution-Explanation"> </a></h3><p>To explain this solution, I will first explain the factors() function. This function first checks if the number is odd or even using the modulus operator. This is done because if the number is even, the step size can be 2 instead of one. This step size will capture all factor sets since they must contain even numbers. Next, a list of factors is created usin the reduce and .<strong>add</strong> functions. This combination of functions loops through the numbers by the step size to find the factors. The range of elements was set from 1 to the square root of number since a square root times a square root will equal the original value, there is no reason to search larger numbers. If not num % i says that if there is not a remainder, the number is a factor [sources listed above].</p>
+<p>The find_divisor() function is used to filter the numbers with 8 divisors. A set of divisors was created for each number using a for loop. Then the length of each factor set was filtered using an if statement. I still had to let this solution run overnight to find the answer to 10^12, but eventually got 197912312715 numbers with exactly eight divisors.</p>
 
 </div>
 </div>
